@@ -6,6 +6,11 @@ const liElements = treeElement.querySelectorAll('li');
 
 liElements.forEach((element) => {
   const firsChild = element.firstChild;
+
+  if (!firsChild) {
+    return;
+  }
+
   const spanElement = document.createElement('span');
 
   spanElement.append(firsChild.textContent);
